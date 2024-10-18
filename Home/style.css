@@ -383,3 +383,75 @@ img {
         height: auto;
     }
 }
+
+/* Ensure content doesn't overflow on mobile */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.wrapper {
+    max-width: 100%; /* Ensure it takes full width on mobile */
+    margin: 0 auto;
+    padding: 0 15px; /* Add padding for some breathing space */
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+/* Center headers and text */
+h1, h2, h3, h4, p, .deskripsi {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 10px; /* Add padding to avoid hitting the sides */
+    word-wrap: break-word; /* Break long words to avoid overflow */
+}
+
+/* Prevent elements from colliding */
+.kolom {
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding fits the container */
+}
+
+/* Adjust section spacing on mobile */
+section {
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Ensure images and text don’t collide */
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .kolom {
+        width: 100%;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    /* Adjust text font size for better readability */
+    .kolom p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjustments for very small devices */
+    .kolom {
+        padding: 10px;
+    }
+
+    h1, h2, h3, h4, p, .deskripsi {
+        font-size: 14px; /* Make the text smaller */
+    }
+
+    /* Prevent text from hitting edges */
+    .kolom p, .kolom h2 {
+        margin: 0 5px;
+        padding: 0 5px;
+    }
+}
