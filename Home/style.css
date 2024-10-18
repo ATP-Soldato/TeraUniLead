@@ -27,6 +27,9 @@ body {
     display: block;
 }
 
+.menu {
+    float: right;
+    
 /* Center the menu and reduce header height */
 nav {
     width: 100%;
