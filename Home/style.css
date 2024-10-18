@@ -33,7 +33,7 @@ nav {
     margin: auto;
     display: flex;
     justify-content: center; /* Center the navigation items */
-    line-height: 60px; /* Adjust header height */
+    line-height: 20px; /* Adjust header height */
     position: sticky;
     top: 0;
     background: #47c259;
