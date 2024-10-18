@@ -27,22 +27,19 @@ body {
     display: block;
 }
 
-.menu {
-    float: right;
-}
-
+/* Center the menu and reduce header height */
 nav {
     width: 100%;
     margin: auto;
     display: flex;
-    justify-content: space-between;
-    line-height: 80px;
+    justify-content: center; /* Center the navigation items */
+    line-height: 60px; /* Adjust header height */
     position: sticky;
     top: 0;
     background: #47c259;
     z-index: 1;
     border-bottom: 1px solid black;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    padding: 10px 0; /* Add padding for a better look */
 }
 
 nav ul {
@@ -54,14 +51,14 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 0 15px; /* Space out the items */
 }
 
 nav ul li a {
     color: white;
     font-weight: bold;
     text-align: center;
-    padding: 10px 20px;
+    padding: 10px 20px; /* Space around text */
     text-decoration: none;
     display: block;
 }
@@ -250,6 +247,10 @@ button[type="button"]:hover {
     .logo a {
         font-size: 30px;
         text-align: center;
+    }
+
+    nav {
+        flex-direction: column; /* Stack items on smaller screens */
     }
 
     nav ul {
