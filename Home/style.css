@@ -2,7 +2,6 @@
     text-decoration: none;
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box; /* Add box-sizing for better control */
 }
 
 body {
@@ -12,31 +11,29 @@ body {
 }
 
 .wrapper {
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
+    width: 1100px;
+    margin:auto;
     position: relative;
 }
 
 .logo a {
     font-size: 50px;
     font-weight: 800;
+    float: left;
     font-family: courier;
     color: white;
-    text-align: center;
-    display: block;
 }
 
 .menu {
     float: right;
-    
-/* Center the menu and reduce header height */
+}
+
 nav {
     width: 100%;
     margin: auto;
     display: flex;
     justify-content: center; /* Center the navigation items */
-    line-height: 20px; /* Adjust header height */
+    line-height: 80px; /* Adjust header height */
     position: sticky;
     top: 0;
     background: #47c259;
@@ -64,12 +61,14 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
 section {
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
     margin-bottom: 50px;
-    justify-content: space-between;
 }
 
 .kolom {
@@ -79,7 +78,8 @@ section {
     font-size: 20px;
     text-align: justify;
     line-height: 35px;
-    width: 100%;
+
+
 }
 
 .kolom .deskripsi {
@@ -87,7 +87,6 @@ section {
     font-weight: bold;
     font-family: "comic sans ms";
     color: #47c259;
-    text-align: center;
 }
 
 .kolom .deskripsi2 {
@@ -95,7 +94,6 @@ section {
     font-weight: bold;
     font-family: "comic sans ms";
     color: #47c259;
-    text-align: center;
 }
 
 h2 {
@@ -104,7 +102,6 @@ h2 {
     font-size: 45px;
     margin-bottom: 20px;
     color: #47c259;
-    text-align: center;
     width: 100%;
     line-height: 50px;
 }
@@ -113,12 +110,10 @@ a.tbl-biru {
     background: #ff8207;
     border-radius: 20px;
     margin-top: 20px;
-    padding: 15px 20px;
+    padding: 15px 20px 15px 20px;
     color: white;
     cursor: pointer;
     font-weight: bold;
-    display: inline-block;
-    text-align: center;
 }
 
 a.tbl-biru:hover {
@@ -127,19 +122,20 @@ a.tbl-biru:hover {
 }
 
 p {
-    margin: 10px 0;
-    padding: 10px 0;
+    margin:  10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
 }
 
 .mid {
     text-align: center;
     width: 100%;
     font-family: "comic sans ms";
+
 }
 
 #contact {
     background: #dedede;
-    padding: 50px 0;
+    padding:50px 0px 50px 0px;
 }
 
 .footer {
@@ -148,12 +144,11 @@ p {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    justify-content: space-around;
 }
 
 .footer-section {
     width: 20%;
-    margin-bottom: 20px;
+    margin: 0 auto;
 }
 
 h3 {
@@ -162,7 +157,6 @@ h3 {
     font-size: 30px;
     margin-bottom: 20px;
     color: #47c259;
-    text-align: center;
     width: 100%;
     line-height: 50px;
 }
@@ -170,13 +164,49 @@ h3 {
 #Copyright {
     text-align: center;
     width: 100%;
-    padding: 50px 0;
+    padding: 50px 0px 50px 0px;
     margin-top: 50px;
+}
+
+@media screen and (max-width: 991.98px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .logo a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .menu {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav .menu ul {
+        text-align: center;
+        margin: auto;
+        line-height: 60px;
+    }
+
+    nav .menu ul li {
+        display: inline-block;
+        float: none;
+    }
+
+    section {
+        display: block;
+    }
+
+    section img {
+        display: block;
+    }
 }
 
 /* Popup background container */
 .popup-container {
-    display: none;
+    display: none;  /* Initially hidden */
     position: fixed;
     top: 0;
     left: 0;
@@ -185,7 +215,7 @@ h3 {
     background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1000; /* Ensure it appears above other elements */
 }
 
 /* Popup box styling */
@@ -208,6 +238,7 @@ input[type="email"] {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Ensure consistent sizing */
 }
 
 /* Buttons styling */
@@ -233,72 +264,4 @@ button[type="button"] {
 
 button[type="button"]:hover {
     background-color: #d32f2f;
-}
-
-/* Mobile responsive design */
-@media screen and (max-width: 991.98px) {
-    .wrapper {
-        width: 90%;
-    }
-
-    .logo a {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    nav {
-        flex-direction: column; /* Stack items on smaller screens */
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    section {
-        display: block;
-        text-align: center;
-    }
-
-    .kolom {
-        margin: 20px 0;
-    }
-
-    .footer-section {
-        width: 45%;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    h2 {
-        font-size: 30px;
-    }
-
-    .kolom .deskripsi2 {
-        font-size: 40px;
-    }
-
-    nav ul li a {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-
-    section img {
-        width: 100%;
-    }
-
-    .footer-section {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    button {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
 }
